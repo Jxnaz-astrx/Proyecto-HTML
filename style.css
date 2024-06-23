@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.contenedor > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+
+body {
+    height: 100%;
+}
+p{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tit{
+    text-align: center;
+}
+.contenedor {
+    min-height: 100%;
+    background-color: beige;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+
+    grid-template:
+        'header' 50px
+        'navbar' 40px
+        'aside' 100px
+        'article1' auto
+        'article2' auto
+        'article3' auto
+        'article4' auto
+        'footer' 50px;
+}
+
+.header {
+    background-color: rgb(207, 190, 84);
+    grid-area: header;
+    padding: 10px;
+
+}
+
+.navbar {
+    background-color: palegreen;
+    grid-area: navbar;
+}
+
+.aside {
+    background-color: rgb(207, 190, 84);
+    grid-area: aside;
+   
+}
+#volver{
+    background-color: rgb(207, 190, 84);
+}
+legend{
+    color: white
+}
+
+.article1 {
+    background-color:white;
+    grid-area: article1;
+    background-image: url('imagenes/foto2.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+
+}
+
+.article2 {
+    grid-area: article2;
+    background-image: url('imagenes/foto3.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+   
+}
+.cambiar{
+    color: white;
+}
+
+.article3 {
+    
+    grid-area: article3;
+    background-image: url('imagenes/foto7.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    color: white;
+    ;
+}
+.article4 {
+    grid-area: article4;
+    background-image: url('imagenes/foto8.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    color: black;
+    
+}
+
+
+.footer {
+    background-color: rgb(207, 190, 84);
+    grid-area: footer;
+}
+
+@media (min-width: 600px) {
+    .contenedor {
+        grid-template:
+            'header header' 60px
+            'navbar navbar' 40px
+            'aside article1' auto
+            'aside article2' auto
+            'aside article3' auto
+            'aside article4' auto
+            'footer footer' 100px;
+        grid-template-columns: 200px auto;
+    }
+}
+
+.animacion {
+    transition: transform 0.3s ease;
+}
+
+.animacion:hover {
+    transform: scale(1.1);
+}
