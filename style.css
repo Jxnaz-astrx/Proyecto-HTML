@@ -13,6 +13,7 @@
 
 body {
     height: 100%;
+    width: 100%;
 }
 p{
     font-size: 16px;
@@ -33,7 +34,7 @@ p{
     grid-template:
         'header' 50px
         'navbar' 40px
-        'aside' 100px
+        'aside' 400px
         'article1' auto
         'article2' auto
         'article3' auto
@@ -42,7 +43,10 @@ p{
 }
 
 .header {
-    background-color: rgb(207, 190, 84);
+    background-image: url('imagenes/foto1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     grid-area: header;
     padding: 10px;
 
@@ -111,6 +115,11 @@ legend{
 .footer {
     background-color: rgb(207, 190, 84);
     grid-area: footer;
+    text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
 }
 
 @media (min-width: 600px) {
